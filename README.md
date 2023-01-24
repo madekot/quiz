@@ -2,6 +2,11 @@
 
 ## Домашний проект викторина
 
+[Макет в фигме](https://www.figma.com/file/8s5H0DFYT5OhJ382YDovqP/quiz?node-id=0%3A1&t=ZP7cZaq8IUw1M0Xx-1)
+
+![Главный экран](https://skr.sh/i/240123/wW752Tzr.jpg?download=1&name=%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%2024-01-2023%2014:11:21.jpg)
+![Экран игры](https://skr.sh/i/240123/nVG6BI6K.jpg?download=1&name=%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%2024-01-2023%2014:12:48.jpg)
+
 ***
 Основной стек разрабоки: React, Redux-Toolkit, TypeScript
 ***
