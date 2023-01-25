@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { ChakraProvider } from '@chakra-ui/react'
-import './index.css';
+import {ChakraProvider, extendTheme, withDefaultColorScheme} from '@chakra-ui/react'
+import './index.module.scss';
 import {App} from './components/App';
 import {Provider} from "react-redux";
 import {store} from "./store";
 
+const customTheme = extendTheme(withDefaultColorScheme({colorScheme: 'green'}))
+
+console.log(customTheme)
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,7 +16,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ChakraProvider>
+      <ChakraProvider theme={customTheme}>
         <App />
       </ChakraProvider>
     </Provider>
