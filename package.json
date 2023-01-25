@@ -19,16 +19,19 @@
     "react-dom": "^18.2.0",
     "react-redux": "8.0.2",
     "react-scripts": "5.0.1",
+    "sass": "1.57.1",
     "typescript": "^4.9.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"react-scripts start\" \"npm run ts:watch\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "test:editorconfig": "eclint check 'src/**/*'",
-    "fix:editorconfig": "eclint fix 'src/**/*'"
+    "fix:editorconfig": "eclint fix 'src/**/*'",
+    "component": "generate-react component",
+    "ts:watch": "npx tsc --noEmit --incremental --watch"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +52,9 @@
     ]
   },
   "devDependencies": {
-    "eclint": "2.8.1"
+    "concurrently": "7.6.0",
+    "eclint": "2.8.1",
+    "generate-react-cli": "8.2.0",
+    "typescript-plugin-css-modules": "4.1.1"
   }
 }
