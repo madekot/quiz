@@ -1,10 +1,11 @@
-import './App.css';
-import {MyButton} from "../MyButton";
+import { MainMenu } from "components/MainMenu";
+import {MyQuestion} from "../MyQuestion";
 
 export function App() {
   return (
-    <div className="App">
-      <MyButton/>
-    </div>
+    <>
+      <MainMenu/>
+      <MyQuestion/>
+    </>
   );
 }
