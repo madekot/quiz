@@ -6,9 +6,15 @@ import {App} from './components/App';
 import {Provider} from "react-redux";
 import {store} from "./store";
 
-const customTheme = extendTheme(withDefaultColorScheme({colorScheme: 'green'}))
-
-console.log(customTheme)
+const customTheme = extendTheme(
+  withDefaultColorScheme({
+    colorScheme: 'green'
+  }),
+  withDefaultColorScheme({
+    colorScheme: 'gray',
+    components: ['Table'],
+  }),
+)
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

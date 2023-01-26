@@ -1,4 +1,4 @@
-import {Center, Container} from "@chakra-ui/react";
+import {Container} from "@chakra-ui/react";
 import {ReactNode} from 'react';
 
 interface MyContainerProps {
@@ -7,10 +7,8 @@ interface MyContainerProps {
 
 export const MyContainer = ({children}: MyContainerProps) => {
   return (
-    <Container maxW='1142px'>
-      <Center marginTop='182px'>
-        {children}
-      </Center>
+    <Container marginTop='182px' maxWidth='952px' marginLeft='auto' marginRight='auto'>
+      {children}
     </Container>
   )
 }
