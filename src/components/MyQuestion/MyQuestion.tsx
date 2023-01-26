@@ -1,5 +1,14 @@
 import {MyContainer} from "../MyContainer";
-import {Avatar, AvatarBadge, Button, Flex, Heading} from "@chakra-ui/react";
+import {Flex} from "@chakra-ui/react";
+import {Timer} from "../Timer";
+import {TextGroup} from "../TextGroup";
+import {MyAvatar} from "../MyAvatar";
+import {MyLogo} from "../MyLogo";
+import {MyButton} from "../MyButton";
+
+const TEXT_INFO = `Сложно сказать, почему интерактивные прототипы призваны к ответу. Сложно сказать, почему некоторые
+        особенности внутренней политики преданы социально-демократической анафеме. Как принято считать,
+        предприниматели в сети интернет объективно рассмотрены соответствующими инстанциями.`
 
 interface MyQuestionProps {
 }
@@ -7,18 +16,15 @@ interface MyQuestionProps {
 export const MyQuestion = ({}: MyQuestionProps) => {
   return (
     <MyContainer>
-      <Flex flexDirection='column' flexGrow={1} maxWidth='950px'>
-        <Heading size='4xl' color='green.400' textAlign={'center'} marginBottom={'45px'}>Quiz App</Heading>
-        <Flex justifyContent={'right'}>
-          <Avatar size='xl' marginBottom='40px'>
-            <AvatarBadge boxSize='1.25em' bg='green.500' />
-          </Avatar>
+      <Flex flexDirection='column'>
+        <MyLogo marginBottom='45px'/>
+        <MyAvatar justifyContent={'flex-end'}/>
+        <Flex gap={'30'} marginBottom={'91px'}>
+          <Timer marginTop={'60px'} alignSelf={'flex-start'}/>
+          <TextGroup text={TEXT_INFO} heading={'1 / 20'}/>
         </Flex>
-        <Flex display='flex' flexWrap={'wrap'}
-              gap='30px'
-              justifyContent={'center'}>
-          <Button flexGrow={1} maxWidth={'350px'}>Молодец, что знаешь</Button>
-          <Button flexGrow={1} maxWidth={'350px'} variant='outline'>Тут у тебя пробел в знаниях</Button>
+        <Flex display='flex' flexDirection='row' gap='30px' justifyContent={'flex-end'}>
+          <MyButton flexGrow={1} maxWidth={'825px'}> Показать правильный ответ</MyButton>
         </Flex>
       </Flex>
     </MyContainer>

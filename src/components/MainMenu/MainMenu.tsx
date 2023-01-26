@@ -1,5 +1,8 @@
-import {Avatar, AvatarBadge, Button, Flex, Heading} from "@chakra-ui/react";
+import {Flex} from "@chakra-ui/react";
 import {MyContainer} from "../MyContainer";
+import {MyAvatar} from "../MyAvatar";
+import {MyLogo} from "../MyLogo";
+import {MyButton} from "../MyButton";
 
 interface MainMenuProps {
 }
@@ -8,15 +11,11 @@ export const MainMenu = ({}: MainMenuProps) => {
   return (
     <MyContainer>
       <Flex flexDirection='column'>
-        <Heading size='4xl' color='green.400' textAlign={'center'} marginBottom={'45px'}>Quiz App</Heading>
-        <Flex justifyContent={'center'}>
-          <Avatar size='xl' marginBottom='40px'>
-            <AvatarBadge boxSize='1.25em' bg='green.500' />
-          </Avatar>
-        </Flex>
-        <Flex flexDirection={'column'} gap='30px' maxW='540px'>
-          <Button>начать игру</Button>
-          <Button variant='outline'>показать таблицу статистики</Button>
+        <MyLogo marginBottom='45px'/>
+        <MyAvatar justifyContent={'center'}/>
+        <Flex flexDirection='column' gap='30px' maxWidth={'350px'} alignSelf={'center'}>
+          <MyButton>начать игру</MyButton>
+          <MyButton variant='outline'>показать таблицу статистики</MyButton>
         </Flex>
       </Flex>
     </MyContainer>
