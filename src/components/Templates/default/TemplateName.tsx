@@ -1,10 +1,6 @@
-import css from './TemplateName.module.scss'
-
-interface TemplateNameProps {}
-
-export const TemplateName = ({}: TemplateNameProps) => {
+export const TemplateName = () => {
   return (
-    <div className={css.templateName}>
+    <div>
       TemplateName Component
     </div>
   )

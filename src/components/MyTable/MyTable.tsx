@@ -1,7 +1,7 @@
-import {Table, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr,} from '@chakra-ui/react'
-import {HTMLChakraProps} from "@chakra-ui/system";
+import {Table, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr} from '@chakra-ui/react'
+import {HTMLChakraProps} from '@chakra-ui/system'
 
-interface MyTableProps extends HTMLChakraProps<"div"> {}
+type MyTableProps = HTMLChakraProps<'div'>
 
 export const MyTable = (props: MyTableProps) => {
   return (
