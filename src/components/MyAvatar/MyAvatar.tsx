@@ -1,4 +1,4 @@
-import {Avatar, AvatarBadge, Flex} from "@chakra-ui/react";
+import {Avatar, AvatarBadge, Flex} from '@chakra-ui/react'
 
 interface MyAvatarProps {
   justifyContent: 'center' | 'flex-end'

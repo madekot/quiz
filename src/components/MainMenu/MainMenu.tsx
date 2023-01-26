@@ -1,18 +1,15 @@
-import {Flex} from "@chakra-ui/react";
-import {MyContainer} from "../MyContainer";
-import {MyAvatar} from "../MyAvatar";
-import {MyLogo} from "../MyLogo";
-import {MyButton} from "../MyButton";
+import {Flex} from '@chakra-ui/react'
+import {MyContainer} from '../MyContainer'
+import {MyAvatar} from '../MyAvatar'
+import {MyLogo} from '../MyLogo'
+import {MyButton} from '../MyButton'
 
-interface MainMenuProps {
-}
-
-export const MainMenu = ({}: MainMenuProps) => {
+export const MainMenu = () => {
   return (
     <MyContainer>
       <Flex flexDirection='column'>
-        <MyLogo marginBottom='45px'/>
-        <MyAvatar justifyContent={'center'}/>
+        <MyLogo marginBottom='45px' />
+        <MyAvatar justifyContent={'center'} />
         <Flex flexDirection='column' gap='30px' maxWidth={'350px'} alignSelf={'center'}>
           <MyButton>начать игру</MyButton>
           <MyButton variant='outline'>показать таблицу статистики</MyButton>

@@ -1,19 +1,16 @@
-import {MyContainer} from "../MyContainer";
-import {Flex} from "@chakra-ui/react";
-import {Timer} from "../Timer";
-import {TextGroup} from "../TextGroup";
-import {MyAvatar} from "../MyAvatar";
-import {MyLogo} from "../MyLogo";
-import {MyButton} from "../MyButton";
+import {MyContainer} from '../MyContainer'
+import {Flex} from '@chakra-ui/react'
+import {Timer} from '../Timer'
+import {TextGroup} from '../TextGroup'
+import {MyAvatar} from '../MyAvatar'
+import {MyLogo} from '../MyLogo'
+import {MyButton} from '../MyButton'
 
 const TEXT_INFO = `Сложно сказать, почему интерактивные прототипы призваны к ответу. Сложно сказать, почему некоторые
         особенности внутренней политики преданы социально-демократической анафеме. Как принято считать,
         предприниматели в сети интернет объективно рассмотрены соответствующими инстанциями.`
 
-interface MyQuestionProps {
-}
-
-export const MyQuestion = ({}: MyQuestionProps) => {
+export const MyQuestion = () => {
   return (
     <MyContainer>
       <Flex flexDirection='column'>
