@@ -1,8 +1,9 @@
-import {Flex} from '@chakra-ui/react'
-import {MyContainer} from '../MyContainer'
 import {MyAvatar} from '../MyAvatar'
-import {MyLogo} from '../MyLogo'
 import {MyButton} from '../MyButton'
+import {MyContainer} from '../MyContainer'
+import {MyLogo} from '../MyLogo'
+
+import {Flex} from '@chakra-ui/react'
 
 interface MainMenuProps {
   handlePlayGameClick: () => void

@@ -1,11 +1,10 @@
-import {useState} from 'react'
-
+import dataMock from '../../mock/data.json'
 import {MainMenu} from '../MainMenu'
 import {MyQuestion} from '../MyQuestion'
 import {RightAnswer} from '../RightAnswer'
 import {StatisticsTable} from '../StatisticsTable'
 
-import dataMock from '../../mock/data.json'
+import {useState} from 'react'
 
 type StatusGame = 'game' | 'end' | 'mainScreen' | 'table' | 'rightAnswer'
 

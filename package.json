@@ -33,12 +33,6 @@
     "component": "generate-react component",
     "ts:watch": "npx tsc --noEmit --incremental --watch"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",

@@ -1,10 +1,11 @@
+import {App} from './components/App'
+// import {store} from './store'
+
+import {ChakraProvider, extendTheme, withDefaultColorScheme} from '@chakra-ui/react'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {ChakraProvider, extendTheme, withDefaultColorScheme} from '@chakra-ui/react'
 import './index.module.scss'
-import {App} from './components/App'
-import {Provider} from 'react-redux'
-import {store} from './store'
+// import {Provider} from 'react-redux'
 
 const customTheme = extendTheme(
   withDefaultColorScheme({

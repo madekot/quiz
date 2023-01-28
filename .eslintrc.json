@@ -4,6 +4,8 @@
         "es2021": true
     },
     "extends": [
+        "react-app",
+        "react-app/jest",
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",
@@ -25,8 +27,13 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "no-console": "warn",
         "no-trailing-spaces": "error",
-        "quotes": ["error", "single"],
+        "jsx-quotes": ["error", "prefer-single"],
+        "quotes": ["error", "single", {
+            "avoidEscape": true,
+            "allowTemplateLiterals": true
+        }],
         "semi": ["error", "never"],
         "indent": ["error", 2],
         "comma-dangle": ["error", {
@@ -35,6 +42,15 @@
             "imports": "never",
             "exports": "never",
             "functions": "never"
+        }],
+        "import/order": ["error", {
+            "groups": ["index", "sibling", "parent", "internal",
+                "external", "builtin", "object", "type"],
+            "newlines-between": "always-and-inside-groups",
+            "alphabetize": {
+                "order": "asc",
+                "caseInsensitive": true
+            }
         }]
     }
 }

@@ -1,10 +1,11 @@
-import {MyContainer} from '../MyContainer'
-import {Flex} from '@chakra-ui/react'
-import {Timer} from '../Timer'
-import {TextGroup} from '../TextGroup'
 import {MyAvatar} from '../MyAvatar'
-import {MyLogo} from '../MyLogo'
 import {MyButton} from '../MyButton'
+import {MyContainer} from '../MyContainer'
+import {MyLogo} from '../MyLogo'
+import {TextGroup} from '../TextGroup'
+import {Timer} from '../Timer'
+
+import {Flex} from '@chakra-ui/react'
 
 interface MyQuestionProps {
   handleShowAnswerClick: () => void

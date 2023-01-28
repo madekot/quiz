@@ -1,9 +1,11 @@
-import {MyContainer} from '../MyContainer'
-import {Flex} from '@chakra-ui/react'
-import {MyLogo} from '../MyLogo'
 import {MyAvatar} from '../MyAvatar'
-import {TextGroup} from '../TextGroup'
 import {MyButton} from '../MyButton'
+import {MyContainer} from '../MyContainer'
+
+import {MyLogo} from '../MyLogo'
+import {TextGroup} from '../TextGroup'
+
+import {Flex} from '@chakra-ui/react'
 
 
 interface RightAnswerProps {
