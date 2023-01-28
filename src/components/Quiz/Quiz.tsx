@@ -54,7 +54,15 @@ export const Quiz = () => {
 
     switch (gameStatus) {
     case 'mainScreen':
-      return <MainMenu handlePlayGameClick={showQuestion} handleShowTable={showTable} />
+      return (
+        <MainMenu
+          handlePlayGameClick={() => {
+            restartGame()
+            showQuestion()
+          }}
+          handleShowTable={showTable}
+        />
+      )
     case 'game':
       return (
         <MyQuestion
@@ -81,7 +89,6 @@ export const Quiz = () => {
             showQuestion()
           }}
           handleMainMenuClick={() => {
-            restartGame()
             showMainScreen()
           }} />
       )
