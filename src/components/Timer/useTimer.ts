@@ -1,22 +1,18 @@
-import {useEffect, useState} from 'react'
-const START_TIME = 15
-export const usePercent = (startTime = START_TIME) => {
-  const [seconds, setSeconds] = useState(0)
+import {useTick} from './useTick'
 
-  useEffect(() => {
-    const clearStamp = setInterval(
-      () => setSeconds((prevState) => {
-        if (prevState === startTime) {
-          clearInterval(clearStamp)
-          return prevState
-        }
-        return prevState + 1
-      }),
-      1000
-    )
+import {useState} from 'react'
 
-    return () => clearInterval(clearStamp)
-  },
-  [])
-  return {seconds}
+export const useTimer = (startSecond: number) => {
+  const [second, setSecond] = useState(startSecond)
+
+  useTick((clearStamp) => {
+    setSecond((prevSecond) => {
+      if (prevSecond === 0) {
+        clearInterval(clearStamp)
+        return prevSecond
+      }
+      return prevSecond - 1
+    })
+  })
+  return {second}
 }
