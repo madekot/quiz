@@ -7,7 +7,7 @@ interface MyContainerProps {
 
 export const MyContainer = ({children}: MyContainerProps) => {
   return (
-    <Container marginTop='182px' maxWidth='952px' marginLeft='auto' marginRight='auto'>
+    <Container maxWidth='952px' marginLeft='auto' marginRight='auto'>
       {children}
     </Container>
   )

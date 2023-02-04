@@ -1,0 +1,12 @@
+.footer {
+  margin-top: auto;
+  min-height: var(--footer-min-height);
+  background-color: var(--footer-background-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  margin-top: 50px;
+}

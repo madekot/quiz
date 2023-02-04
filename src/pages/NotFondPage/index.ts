@@ -1,0 +1,1 @@
+export {NotFondPage} from './NotFondPage'

@@ -1,11 +1,9 @@
-import {MyButton} from '../MyButton'
-import {MyContainer} from '../MyContainer'
-
-import {MyLogo} from '../MyLogo'
-import {MyTable} from '../MyTable'
-import {TextGroup} from '../TextGroup'
-
 import {Center, Flex} from '@chakra-ui/react'
+import {MyButton} from 'components/MyButton'
+import {MyContainer} from 'components/MyContainer'
+import {MyLogo} from 'components/MyLogo'
+import {MyTable} from 'components/MyTable'
+import {TextGroup} from 'components/TextGroup'
 
 interface StatisticsTableProps {
   handleStartGameClick: () => void

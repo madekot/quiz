@@ -1,10 +1,11 @@
-import {App} from './components/App'
+import {App} from './App'
 // import {store} from './store'
 
 import {ChakraProvider, extendTheme, withDefaultColorScheme} from '@chakra-ui/react'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.module.scss'
+import {BrowserRouter} from 'react-router-dom'
 // import {Provider} from 'react-redux'
 
 const customTheme = extendTheme(
@@ -23,9 +24,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     {/*<Provider store={store}>*/}
-    <ChakraProvider theme={customTheme}>
-      <App />
-    </ChakraProvider>
+    <BrowserRouter>
+      <ChakraProvider theme={customTheme}>
+        <App />
+      </ChakraProvider>
+    </BrowserRouter>
     {/*</Provider>*/}
   </React.StrictMode>
 )

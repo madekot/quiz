@@ -1,0 +1,27 @@
+@mixin link() {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.header {
+  min-height: var(--header-min-height);
+  background-color: var(--header-background-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px
+}
+
+.link {
+  @include link();
+  opacity: 0.7;
+}
+
+.linkActive {
+  @include link();
+  opacity: 1;
+  transform: scale(1.1);
+}
