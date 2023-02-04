@@ -1,14 +1,14 @@
-import css from './MyQuestion.module.scss'
+import css from './MyQuestion.module.scss';
 
-import {Flex} from '@chakra-ui/react'
-import {MyAvatar} from 'components/MyAvatar'
-import {MyContainer} from 'components/MyContainer'
-import {MyLink} from 'components/MyLink'
-import {MyLogo} from 'components/MyLogo'
-import {TextGroup} from 'components/TextGroup'
-import {Timer} from 'components/Timer'
-import {useParamsId} from 'hooks/useParamsId'
-import {Question, RoutePath} from 'types'
+import {Flex} from '@chakra-ui/react';
+import {MyAvatar} from 'components/MyAvatar';
+import {MyContainer} from 'components/MyContainer';
+import {MyLink} from 'components/MyLink';
+import {MyLogo} from 'components/MyLogo';
+import {TextGroup} from 'components/TextGroup';
+import {Timer} from 'components/Timer';
+import {useParamsId} from 'hooks/useParamsId';
+import {Question, RoutePath} from 'types';
 
 interface MyQuestionProps {
   question: Question['question']
@@ -17,7 +17,7 @@ interface MyQuestionProps {
 }
 
 export const MyQuestion = ({question, totalQuestion, currentQuestion}: MyQuestionProps) => {
-  const id = useParamsId()
+  const id = useParamsId();
 
   return (
     <MyContainer>
@@ -33,5 +33,5 @@ export const MyQuestion = ({question, totalQuestion, currentQuestion}: MyQuestio
         </Flex>
       </Flex>
     </MyContainer>
-  )
-}
+  );
+};

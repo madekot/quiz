@@ -1,9 +1,9 @@
-import {Center, Flex} from '@chakra-ui/react'
-import {MyButton} from 'components/MyButton'
-import {MyContainer} from 'components/MyContainer'
-import {MyLogo} from 'components/MyLogo'
-import {MyTable} from 'components/MyTable'
-import {TextGroup} from 'components/TextGroup'
+import {Center, Flex} from '@chakra-ui/react';
+import {MyButton} from 'components/MyButton';
+import {MyContainer} from 'components/MyContainer';
+import {MyLogo} from 'components/MyLogo';
+import {MyTable} from 'components/MyTable';
+import {TextGroup} from 'components/TextGroup';
 
 interface StatisticsTableProps {
   handleStartGameClick: () => void
@@ -13,7 +13,7 @@ interface StatisticsTableProps {
 }
 
 export const StatisticsTable = ({handleStartGameClick, handleMainMenuClick, totalQuestion, correctAnswers}: StatisticsTableProps) => {
-  const percentCorrectAnswers =  100 / totalQuestion * correctAnswers
+  const percentCorrectAnswers =  100 / totalQuestion * correctAnswers;
   return (
     <MyContainer>
       <Flex flexDirection='column'>
@@ -33,5 +33,5 @@ export const StatisticsTable = ({handleStartGameClick, handleMainMenuClick, tota
         </Flex>
       </Flex>
     </MyContainer>
-  )
-}
+  );
+};

@@ -1,1 +1,1 @@
-export {NotFondPage} from './NotFondPage'
+export {NotFondPage} from './NotFondPage';

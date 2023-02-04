@@ -9,7 +9,7 @@ export const csn = (primaryClass: string, secondaryClasses?: string[], booleanCl
     ...Object.entries(booleanClasses || {})
       .filter(([_, value]) => Boolean(value))
       .map(([className, _]) => className),
-  ].join(' ')
-}
+  ].join(' ');
+};
 
 // classNames('foo', {lex: true, neo: true, dao: false}, ['foo', 'bar', 'baz']) // 'foo lex neo foo bar baz'

@@ -1,13 +1,13 @@
-import css from './MainMenuPage.module.scss'
+import css from './MainMenuPage.module.scss';
 
-import {Flex} from '@chakra-ui/react'
-import {MyAvatar} from 'components/MyAvatar'
-import {MyButton} from 'components/MyButton'
-import {MyContainer} from 'components/MyContainer'
-import {MyLink} from 'components/MyLink'
-import {MyLogo} from 'components/MyLogo'
+import {Flex} from '@chakra-ui/react';
+import {MyAvatar} from 'components/MyAvatar';
+import {MyButton} from 'components/MyButton';
+import {MyContainer} from 'components/MyContainer';
+import {MyLink} from 'components/MyLink';
+import {MyLogo} from 'components/MyLogo';
 
-import {RoutePath} from 'types'
+import {RoutePath} from 'types';
 
 export const MainMenuPage = () => {
   return (
@@ -21,5 +21,5 @@ export const MainMenuPage = () => {
         </Flex>
       </Flex>
     </MyContainer>
-  )
-}
+  );
+};

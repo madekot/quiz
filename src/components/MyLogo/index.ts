@@ -1,1 +1,1 @@
-export * from './MyLogo'
+export * from './MyLogo';

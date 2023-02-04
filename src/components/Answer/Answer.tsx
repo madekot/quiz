@@ -1,15 +1,15 @@
-import css from './Answer.module.scss'
+import css from './Answer.module.scss';
 
-import {Flex} from '@chakra-ui/react'
-import {MyAvatar} from 'components/MyAvatar'
-import {MyButton} from 'components/MyButton'
-import {MyContainer} from 'components/MyContainer'
-import {MyLink} from 'components/MyLink'
-import {MyLogo} from 'components/MyLogo'
-import {TextGroup} from 'components/TextGroup'
-import {useParamsId} from 'hooks/useParamsId'
-import {useNavigate} from 'react-router-dom'
-import {RoutePath} from 'types'
+import {Flex} from '@chakra-ui/react';
+import {MyAvatar} from 'components/MyAvatar';
+import {MyButton} from 'components/MyButton';
+import {MyContainer} from 'components/MyContainer';
+import {MyLink} from 'components/MyLink';
+import {MyLogo} from 'components/MyLogo';
+import {TextGroup} from 'components/TextGroup';
+import {useParamsId} from 'hooks/useParamsId';
+import {useNavigate} from 'react-router-dom';
+import {RoutePath} from 'types';
 
 interface AnswerProps {
   answer: string
@@ -17,10 +17,10 @@ interface AnswerProps {
 }
 
 export const Answer = ({answer, totalQuestions}: AnswerProps) => {
-  const id = useParamsId()
-  const currentQuestion = id
-  const navigate = useNavigate()
-  const goBack = () => navigate(-1)
+  const id = useParamsId();
+  const currentQuestion = id;
+  const navigate = useNavigate();
+  const goBack = () => navigate(-1);
 
   return (
     <MyContainer>
@@ -41,5 +41,5 @@ export const Answer = ({answer, totalQuestions}: AnswerProps) => {
         </Flex>
       </Flex>
     </MyContainer>
-  )
-}
+  );
+};

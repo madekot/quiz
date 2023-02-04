@@ -1,7 +1,7 @@
-import {Flex, Heading} from '@chakra-ui/react'
-import {MyButton} from 'components/MyButton'
+import {Flex, Heading} from '@chakra-ui/react';
+import {MyButton} from 'components/MyButton';
 
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 export const NotFondPage = () => {
   return (
@@ -11,5 +11,5 @@ export const NotFondPage = () => {
         <Link to={'/'} >вурнуться на главную</Link>
       </MyButton>
     </Flex>
-  )
-}
+  );
+};

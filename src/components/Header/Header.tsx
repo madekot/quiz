@@ -1,16 +1,16 @@
-import css from './Header.module.scss'
+import css from './Header.module.scss';
 
-import {useCallback} from 'react'
-import {NavLink, useMatch} from 'react-router-dom'
-import {RoutePath} from 'types'
+import {useCallback} from 'react';
+import {NavLink, useMatch} from 'react-router-dom';
+import {RoutePath} from 'types';
 
 export const Header = () => {
   const setActive = useCallback(
     ({isActive}: {isActive: boolean}): string => {
-      return isActive ? css.linkActive : css.link
+      return isActive ? css.linkActive : css.link;
     },
-    []
-  )
+    [],
+  );
 
   return (
     <header className={css.header}>
@@ -21,5 +21,5 @@ export const Header = () => {
         Вопросы
       </NavLink>
     </header>
-  )
-}
+  );
+};

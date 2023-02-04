@@ -1,5 +1,5 @@
-import {Avatar, AvatarBadge, Flex} from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
+import {Avatar, AvatarBadge, Flex} from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 interface MyAvatarProps {
   justifyContent: 'center' | 'flex-end'
@@ -14,5 +14,5 @@ export const MyAvatar = ({justifyContent}: MyAvatarProps) => {
         </Avatar>
       </Link>
     </Flex>
-  )
-}
+  );
+};
