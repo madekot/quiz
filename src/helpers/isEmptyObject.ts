@@ -1,0 +1,1 @@
+export const isEmptyObject = (obj?: object) => Boolean(!Object.values(obj || {}).length);

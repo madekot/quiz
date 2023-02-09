@@ -1,24 +1,18 @@
-import css from './Answer.module.scss';
+import {ControlsComponent} from './ControlsComponent';
 
 import {Flex} from '@chakra-ui/react';
 import {MyAvatar} from 'components/MyAvatar';
 import {MyButton} from 'components/MyButton';
 import {MyContainer} from 'components/MyContainer';
-import {MyLink} from 'components/MyLink';
 import {MyLogo} from 'components/MyLogo';
 import {TextGroup} from 'components/TextGroup';
-import {useParamsId} from 'hooks/useParamsId';
 import {useNavigate} from 'react-router-dom';
-import {RoutePath} from 'types';
 
 interface AnswerProps {
   answer: string
-  totalQuestions: number
 }
 
-export const Answer = ({answer, totalQuestions}: AnswerProps) => {
-  const id = useParamsId();
-  const currentQuestion = id;
+export const Answer = ({answer}: AnswerProps) => {
   const navigate = useNavigate();
   const goBack = () => navigate(-1);
 
@@ -32,12 +26,7 @@ export const Answer = ({answer, totalQuestions}: AnswerProps) => {
         </Flex>
         <Flex display='flex' flexWrap={'wrap'} gap='30px' justifyContent={'center'}>
           <MyButton variant={'outline'} onClick={goBack} flexGrow={1}>Вернуться назад</MyButton>
-          {totalQuestions === currentQuestion &&
-            <MyLink classNames={css.myLink} to={RoutePath.QUESTION_LIST} text={'Вернуться к списку вопросов'} />
-          }
-          {totalQuestions !== currentQuestion &&
-            <MyLink classNames={css.myLink} to={`${RoutePath.QUESTION}/${id + 1}`} text={'Следующий вопрос'} />
-          }
+          <ControlsComponent />
         </Flex>
       </Flex>
     </MyContainer>

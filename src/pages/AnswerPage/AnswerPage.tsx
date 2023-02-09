@@ -1,20 +1,18 @@
 import {useItemData} from 'api/useItemData';
 import {Answer} from 'components/Answer';
-import {MyContainer} from 'components/MyContainer';
 import {PageLoader} from 'components/PageLoader';
+import {isEmptyObject} from 'helpers';
 import {useParamsId} from 'hooks/useParamsId';
 
 export const AnswerPage = () => {
   const id = useParamsId();
-  const {item, data} = useItemData(id);
+  const item = useItemData(id);
 
   return (
-    <MyContainer>
-      <PageLoader data={data}>
-        {item &&
-          <Answer answer={item.answer} totalQuestions={data.length}/>
-        }
-      </PageLoader>
-    </MyContainer>
+    <PageLoader isLoading={isEmptyObject(item)}>
+      {item &&
+          <Answer answer={item.answer}/>
+      }
+    </PageLoader>
   );
 };

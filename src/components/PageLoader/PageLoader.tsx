@@ -4,14 +4,14 @@ import {ReactElement} from 'react';
 
 interface PageLoaderProps {
   children?: ReactElement
-  data?: any[]
+  isLoading: boolean
 }
 
 export const PageLoader = (props: PageLoaderProps) => {
-  const {children, data} = props;
+  const {children, isLoading} = props;
   return (
     <>
-      {!data?.length ?
+      {isLoading ?
         <Center>
           <Loader />
         </Center>

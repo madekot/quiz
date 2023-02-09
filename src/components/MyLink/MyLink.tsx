@@ -9,12 +9,13 @@ interface MyLinkProps {
   text: string
   classNames?: string
   variant?: 'outline'
+  isLoading?: boolean
 }
 export const MyLink = (props: MyLinkProps) => {
-  const {to, text, variant, classNames = ''} = props;
+  const {to, text, variant, isLoading, classNames = ''} = props;
   return (
     <Link className={csn(css.myLink, [classNames])} to={to} >
-      <MyButton flexGrow={1} variant={variant}>
+      <MyButton flexGrow={1} variant={variant} isLoading={isLoading}>
         {text}
       </MyButton>
     </Link>

@@ -1,17 +1,21 @@
-import {useAllData} from './useAllData';
-
-import {useMemo} from 'react';
+import Api from 'api';
+import {useEffect, useMemo, useState} from 'react';
 import {Question} from 'types';
 
 type useItemDataProps = Question['id'];
+const api = new Api();
 
 export const useItemData = (id: useItemDataProps) => {
-  const data = useAllData();
+  const [item, setItem] = useState<Question[]>([]);
+
+  useEffect(() => {
+    api.getItem(id).then((response) => setItem(response));
+  }, []);
 
   const itemMemo = useMemo(
-    () => data.find(el => el.id === id),
-    [id, data],
+    () => item[0],
+    [id, item],
   );
 
-  return {item: itemMemo, data};
+  return itemMemo;
 };
