@@ -17,7 +17,7 @@ export const Header = () => {
       <NavLink to={RoutePath.MAIN} className={setActive}>
         Главная
       </NavLink>
-      <NavLink to={RoutePath.QUESTIONS} className={setActive}>
+      <NavLink to={RoutePath.QUESTION_LIST} className={setActive}>
         Вопросы
       </NavLink>
     </header>

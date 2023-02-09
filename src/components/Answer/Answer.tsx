@@ -33,10 +33,10 @@ export const Answer = ({answer, totalQuestions}: AnswerProps) => {
         <Flex display='flex' flexWrap={'wrap'} gap='30px' justifyContent={'center'}>
           <MyButton variant={'outline'} onClick={goBack} flexGrow={1}>Вернуться назад</MyButton>
           {totalQuestions === currentQuestion &&
-            <MyLink classNames={css.myLink} to={RoutePath.QUESTIONS} text={'Вернуться к списку вопросов'} />
+            <MyLink classNames={css.myLink} to={RoutePath.QUESTION_LIST} text={'Вернуться к списку вопросов'} />
           }
           {totalQuestions !== currentQuestion &&
-            <MyLink classNames={css.myLink} to={`${RoutePath.QUESTION_ITEM}/${id + 1}`} text={'Следующий вопрос'} />
+            <MyLink classNames={css.myLink} to={`${RoutePath.QUESTION}/${id + 1}`} text={'Следующий вопрос'} />
           }
         </Flex>
       </Flex>

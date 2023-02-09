@@ -16,7 +16,7 @@ export const MainMenuPage = () => {
         <MyLogo marginBottom='45px' />
         <MyAvatar justifyContent={'center'} />
         <Flex flexDirection='column' gap='30px' maxWidth={'350px'} alignSelf={'center'}>
-          <MyLink classNames={css.myLink} to={RoutePath.QUESTIONS} text={'начать игру'}/>
+          <MyLink classNames={css.myLink} to={RoutePath.QUESTION_LIST} text={'начать игру'}/>
           {/*<MyButton variant='outline'>показать таблицу статистики</MyButton>*/}
         </Flex>
       </Flex>

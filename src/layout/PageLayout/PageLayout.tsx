@@ -1,11 +1,11 @@
-import css from './Layout.module.scss';
 
-import {Footer} from '../Footer';
-import {Header} from '../Header';
+import {Footer} from 'components/Footer';
+import {Header} from 'components/Header';
+import css from 'layout/PageLayout/PageLayout.module.scss';
 
 import {Outlet} from 'react-router-dom';
 
-export const Layout = () => {
+export const PageLayout = () => {
   return (
     <div className={css.app}>
       <Header />

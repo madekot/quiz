@@ -20,7 +20,7 @@ export const QuestionsList = ({data}: QuestionsListProps) => {
           {data.map((el, index) => {
             return (
               <li key={index}>
-                <Link to={RoutePath.QUESTION_ITEM + `/${el.id}`}>
+                <Link to={RoutePath.QUESTION + `/${el.id}`}>
                   <Text fontSize={'xl'}>{el.question}</Text>
                 </Link>
               </li>

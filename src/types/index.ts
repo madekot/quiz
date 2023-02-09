@@ -1,10 +1,10 @@
 export const enum RoutePath {
   MAIN = '/',
   QUIZ = '/quiz',
-  QUESTION_ITEM = '/question',
-  QUESTIONS= '/questions',
+  QUESTION = '/question',
+  QUESTION_LIST = '/question-list',
   ANSWER = '/answer',
-  NOT_FOND_PAGE = '*',
+  NOT_FOND = '*',
 }
 
 export const enum RouteParams {
