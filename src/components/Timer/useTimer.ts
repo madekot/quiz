@@ -1,6 +1,5 @@
-import {useTick} from './useTick';
-
 import {useState} from 'react';
+import {useTick} from './useTick';
 
 export const useTimer = (startSecond: number) => {
   const [second, setSecond] = useState(startSecond);

@@ -1,17 +1,12 @@
+import {NavLink} from 'react-router-dom';
+import {RoutePath} from 'types';
 import css from './Header.module.scss';
 
-import {useCallback} from 'react';
-import {NavLink, useMatch} from 'react-router-dom';
-import {RoutePath} from 'types';
+const setActive = ({isActive}: {isActive: boolean}): string => {
+  return isActive ? css.linkActive : css.link;
+};
 
 export const Header = () => {
-  const setActive = useCallback(
-    ({isActive}: {isActive: boolean}): string => {
-      return isActive ? css.linkActive : css.link;
-    },
-    [],
-  );
-
   return (
     <header className={css.header}>
       <NavLink to={RoutePath.MAIN} className={setActive}>

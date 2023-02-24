@@ -1,10 +1,9 @@
-import css from './ControlsComponent.module.scss';
-
 import {useTotalQuestion} from 'api/useTotalQuestion';
 import {MyLink} from 'components/MyLink';
 import {useParamsId} from 'hooks/useParamsId';
 
 import {RoutePath} from 'types';
+import css from './ControlsComponent.module.scss';
 
 export const ControlsComponent = () => {
   const id = useParamsId();
@@ -12,21 +11,20 @@ export const ControlsComponent = () => {
   const totalQuestions = useTotalQuestion();
   const isLoading = Boolean(totalQuestions);
 
+  const text = totalQuestions === currentQuestion
+    ? 'Вернуться к списку вопросов'
+    : 'Следующий вопрос';
+
+  const to = totalQuestions === currentQuestion
+    ? RoutePath.QUESTION_LIST
+    : `${RoutePath.QUESTION}/${id + 1}`;
+
   return (
-    totalQuestions === currentQuestion ? (
-      <MyLink
-        classNames={css.myLink}
-        to={RoutePath.QUESTION_LIST}
-        text={'Вернуться к списку вопросов'}
-        isLoading={!isLoading}
-      />)
-      : (
-        <MyLink
-          classNames={css.myLink}
-          to={`${RoutePath.QUESTION}/${id + 1}`}
-          text={'Следующий вопрос'}
-          isLoading={!isLoading}
-        />
-      )
+    <MyLink
+      classNames={css.myLink}
+      to={to}
+      text={text}
+      isLoading={!isLoading}
+    />
   );
 };

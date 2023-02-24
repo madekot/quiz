@@ -3,10 +3,15 @@ import {useEffect} from 'react';
 export const useTick = (cb: (clearStamp: number) => void) => {
   useEffect(() => {
     const clearStamp = setInterval(
-      (clearStamp) => cb(clearStamp),
+      (clearStamp) => {
+        return cb(clearStamp);
+      },
       1000,
     );
 
-    return () => clearInterval(clearStamp);
+    return () => {
+      return clearInterval(clearStamp);
+    };
+    // eslint-disable-next-line
   }, []);
 };

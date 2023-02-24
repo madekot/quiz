@@ -7,8 +7,8 @@ export const csn = (primaryClass: string, secondaryClasses?: string[], booleanCl
     primaryClass,
     ...secondaryClasses || [],
     ...Object.entries(booleanClasses || {})
-      .filter(([_, value]) => Boolean(value))
-      .map(([className, _]) => className),
+      .filter(([_, value]) => {return Boolean(value);})
+      .map(([className, _]) => {return className;}),
   ].join(' ');
 };
 

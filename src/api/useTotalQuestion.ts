@@ -1,12 +1,11 @@
-import Api from 'api';
 import {useEffect, useState} from 'react';
+import {getCountQuestions} from './index';
 
-const api = new Api();
 export const useTotalQuestion = () => {
   const [totalQuestion, setTotalQuestion] = useState(0);
 
   useEffect(() => {
-    api.getCountQuestions().then((response) => setTotalQuestion(response));
+    getCountQuestions().then((response) => {return setTotalQuestion(response);});
   }, []);
 
   return totalQuestion;

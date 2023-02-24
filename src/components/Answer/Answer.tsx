@@ -1,5 +1,3 @@
-import {ControlsComponent} from './ControlsComponent';
-
 import {Flex} from '@chakra-ui/react';
 import {MyAvatar} from 'components/MyAvatar';
 import {MyButton} from 'components/MyButton';
@@ -7,6 +5,7 @@ import {MyContainer} from 'components/MyContainer';
 import {MyLogo} from 'components/MyLogo';
 import {TextGroup} from 'components/TextGroup';
 import {useNavigate} from 'react-router-dom';
+import {ControlsComponent} from './ControlsComponent';
 
 interface AnswerProps {
   answer: string
@@ -14,7 +13,7 @@ interface AnswerProps {
 
 export const Answer = ({answer}: AnswerProps) => {
   const navigate = useNavigate();
-  const goBack = () => navigate(-1);
+  const goBack = () => {return navigate(-1);};
 
   return (
     <MyContainer>

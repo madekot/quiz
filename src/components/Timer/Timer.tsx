@@ -1,13 +1,14 @@
+import {CircularProgress, CircularProgressLabel} from '@chakra-ui/react';
 import {usePercent} from './usePercent';
 import {useTimer} from './useTimer';
 
-import {CircularProgress, CircularProgressLabel} from '@chakra-ui/react';
+const START_SECOND = 15;
 
 interface TimerProps {
   marginTop?: string
   alignSelf?: 'flex-start'
 }
-const START_SECOND = 15;
+
 export const Timer = ({marginTop, alignSelf}: TimerProps) => {
   const {second} = useTimer(START_SECOND);
   const {percent} = usePercent(START_SECOND);

@@ -1,8 +1,7 @@
-import css from './MyLink.module.scss';
-
 import {MyButton} from 'components/MyButton';
 import {csn} from 'helpers/classNames';
 import {Link} from 'react-router-dom';
+import css from './MyLink.module.scss';
 
 interface MyLinkProps {
   to: string

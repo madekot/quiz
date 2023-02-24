@@ -1,4 +1,3 @@
-
 import {Center} from '@chakra-ui/react';
 import { Text } from '@chakra-ui/react';
 import {Loader} from 'components/Loader';
@@ -12,10 +11,10 @@ interface QuestionsListProps {
 export const QuestionsList = ({data}: QuestionsListProps) => {
   return (
     <Center>
-      {Boolean(!data?.length) &&
+      {!data.length &&
         <Loader />
       }
-      {Boolean(data?.length) &&
+      {data.length &&
         <ol>
           {data.map((el, index) => {
             return (
