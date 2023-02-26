@@ -6,18 +6,22 @@ export const usePercent = (startSecond: number) => {
 
   useEffect(() => {
     const clearStamp = setInterval(
-      () => {return setCounter((prevCounter) => {
-        if (prevCounter === startSecond) {
-          clearInterval(clearStamp);
-          return prevCounter;
-        }
-        return prevCounter + 1;
-      });},
+      () => {
+        return setCounter((prevCounter) => {
+          if (prevCounter === startSecond) {
+            clearInterval(clearStamp);
+            return prevCounter;
+          }
+          return prevCounter + 1;
+        });
+      },
       1000,
     );
 
     setPercent(100 * counter / startSecond);
-    return () => {return clearInterval(clearStamp);};
+    return () => {
+      return clearInterval(clearStamp);
+    };
   }, [counter, startSecond]);
 
   return {percent};

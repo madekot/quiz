@@ -13,7 +13,9 @@ interface AnswerProps {
 
 export const Answer = ({answer}: AnswerProps) => {
   const navigate = useNavigate();
-  const goBack = () => {return navigate(-1);};
+  const goBack = () => {
+    return navigate(-1);
+  };
 
   return (
     <MyContainer>

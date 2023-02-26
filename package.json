@@ -30,7 +30,7 @@
     "eject": "react-scripts eject",
     "test:editorconfig": "eclint check src/**/*.{ts,tsx,scss}",
     "fix:editorconfig": "eclint fix src/**/*.{ts,tsx,scss}",
-    "fix:esLint": "npx eslint --fix src/**/*.{ts,tsx}",
+    "fix:esLint": "eslint --fix src/**/*.{ts,tsx}",
     "component": "generate-react component",
     "ts:watch": "npx tsc --noEmit --incremental --watch"
   },

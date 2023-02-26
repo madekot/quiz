@@ -10,7 +10,9 @@ export const getAll = (): Promise<Question[]> => {
   return (
     new Promise(resolve => {
       setTimeout(
-        () => {return resolve(dataMock.questions);},
+        () => {
+          return resolve(dataMock.questions);
+        },
         DELAY_TIME,
       );
     })
@@ -22,9 +24,13 @@ export const getItem = (id: Question['id']): Promise<Question[]> => {
 
   return (
     new Promise(resolve => {
-      const item = dataMock.questions.find(el => {return el.id === id;}) as Question;
+      const item = dataMock.questions.find(el => {
+        return el.id === id;
+      }) as Question;
       setTimeout(
-        () => {return resolve([item]);},
+        () => {
+          return resolve([item]);
+        },
         DELAY_TIME,
       );
     })
@@ -37,7 +43,9 @@ export const getCountQuestions = (): Promise<number> => {
   return (
     new Promise(resolve => {
       setTimeout(
-        () => {return resolve(dataMock.questions.length);},
+        () => {
+          return resolve(dataMock.questions.length);
+        },
         DELAY_TIME,
       );
     })
