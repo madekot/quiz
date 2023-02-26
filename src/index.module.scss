@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --min-height: 50px;
+  --background-color: #2f855a;
+
+  --header-min-height: var(--min-height);
+  --header-background-color: var(--background-color);
+
+  --footer-min-height: 30px;
+  --footer-background-color: var(--background-color);
+}

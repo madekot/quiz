@@ -1,10 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import {ChakraProvider, extendTheme, withDefaultColorScheme} from '@chakra-ui/react'
-import './index.module.scss'
-import {App} from './components/App'
-import {Provider} from 'react-redux'
-import {store} from './store'
+import {ChakraProvider, extendTheme, withDefaultColorScheme} from '@chakra-ui/react';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.module.scss';
+import {BrowserRouter} from 'react-router-dom';
+import {App} from './App';
 
 const customTheme = extendTheme(
   withDefaultColorScheme({
@@ -13,18 +12,18 @@ const customTheme = extendTheme(
   withDefaultColorScheme({
     colorScheme: 'gray',
     components: ['Table'],
-  })
-)
+  }),
+);
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-)
+  document.getElementById('root') as HTMLElement,
+);
 root.render(
   <React.StrictMode>
-    {/*<Provider store={store}>*/}
-    <ChakraProvider theme={customTheme}>
-      <App />
-    </ChakraProvider>
-    {/*</Provider>*/}
-  </React.StrictMode>
-)
+    <BrowserRouter>
+      <ChakraProvider theme={customTheme}>
+        <App />
+      </ChakraProvider>
+    </BrowserRouter>
+  </React.StrictMode>,
+);

@@ -7,37 +7,32 @@
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
     "@reduxjs/toolkit": "1.8.5",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.11",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
+    "@testing-library/jest-dom": "5.16.5",
+    "@testing-library/react": "13.4.0",
+    "@testing-library/user-event": "13.5.0",
+    "@types/jest": "27.5.2",
+    "@types/node": "16.18.11",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
     "framer-motion": "8.5.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-redux": "8.0.2",
+    "react-router-dom": "6.8.0",
     "react-scripts": "5.0.1",
     "sass": "1.57.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "2.1.4"
   },
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"npm run ts:watch\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "test:editorconfig": "eclint check 'src/**/*'",
-    "fix:editorconfig": "eclint fix 'src/**/*'",
-    "fix:esLint": "npx eslint --fix src/**/*",
+    "test:editorconfig": "eclint check src/**/*.{ts,tsx,scss}",
+    "fix:editorconfig": "eclint fix src/**/*.{ts,tsx,scss}",
+    "fix:esLint": "eslint --fix src/**/*.{ts,tsx}",
     "component": "generate-react component",
     "ts:watch": "npx tsc --noEmit --incremental --watch"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -52,13 +47,13 @@
     ]
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.49.0",
-    "@typescript-eslint/parser": "^5.49.0",
+    "@types/react-router-dom": "5.3.3",
+    "@typescript-eslint/eslint-plugin": "5.49.0",
+    "@typescript-eslint/parser": "5.49.0",
     "concurrently": "7.6.0",
     "eclint": "2.8.1",
     "eslint": "8.32.0",
     "eslint-plugin-react": "7.32.1",
-    "generate-react-cli": "8.2.0",
-    "typescript-plugin-css-modules": "4.1.1"
+    "generate-react-cli": "8.2.0"
   }
 }

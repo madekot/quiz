@@ -1,4 +1,4 @@
-import {Heading, Stack, Text} from '@chakra-ui/react'
+import {Heading, Stack, Text} from '@chakra-ui/react';
 
 interface TextGroupProps {
   heading?: string
@@ -14,5 +14,5 @@ export const TextGroup = ({heading, text, maxWidth, textTextAlign}: TextGroupPro
       {heading && <Heading as={'p'} size='lg' textAlign='center'>{heading}</Heading>}
       {text && <Text fontSize='2xl' textAlign={textTextAlign}>{text}</Text>}
     </Stack>
-  )
-}
+  );
+};

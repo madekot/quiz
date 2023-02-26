@@ -1,4 +1,4 @@
-import {Heading} from '@chakra-ui/react'
+import {Heading} from '@chakra-ui/react';
 
 interface MyLogoProps {
   marginBottom: string
@@ -7,5 +7,5 @@ interface MyLogoProps {
 export const MyLogo = ({marginBottom}: MyLogoProps) => {
   return (
     <Heading size='4xl' color='green.400' textAlign='center' marginBottom={marginBottom}>Quiz App</Heading>
-  )
-}
+  );
+};
