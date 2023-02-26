@@ -14,7 +14,7 @@ export const QuestionsList = ({data}: QuestionsListProps) => {
       {!data.length &&
         <Loader />
       }
-      {data.length &&
+      {Boolean(data.length) &&
         <ol>
           {data.map((el, index) => {
             return (
