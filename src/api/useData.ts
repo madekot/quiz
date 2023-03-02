@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {Question} from '../types';
+import {Question} from './mockApi';
 
 export const useData = (getData: () => Promise<Question[]>) => {
   const [data, setData] = useState<Question[]>([]);

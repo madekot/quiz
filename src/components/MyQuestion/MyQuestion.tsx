@@ -1,12 +1,14 @@
 import {Flex} from '@chakra-ui/react';
-import {MyAvatar} from 'components/MyAvatar';
-import {MyContainer} from 'components/MyContainer';
-import {MyLink} from 'components/MyLink';
-import {MyLogo} from 'components/MyLogo';
-import {TextGroup} from 'components/TextGroup';
-import {Timer} from 'components/Timer';
+
 import {useParamsId} from 'hooks/useParamsId';
-import {Question, RoutePath} from 'types';
+import {Question} from '../../api/mockApi';
+import {MyAvatar} from '../MyAvatar';
+import {MyContainer} from '../MyContainer';
+import {MyLink} from '../MyLink';
+import {MyLogo} from '../MyLogo';
+import {RoutePath} from '../Router/RouterApp';
+import {TextGroup} from '../TextGroup';
+import {Timer} from '../Timer';
 import css from './MyQuestion.module.scss';
 
 interface MyQuestionProps {

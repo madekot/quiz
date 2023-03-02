@@ -1,11 +1,27 @@
-import {Question} from 'types';
-import {useData} from './useData';
-import {getItem} from './index';
+import {useEffect, useState} from 'react';
+
+import {URL_PATCH} from './consts';
+import {Question} from './mockApi';
 
 type useItemDataProps = Question['id'];
 
 export const useItemData = (id: useItemDataProps) => {
-  return useData(() => {
-    return getItem(id);
-  })[0];
+  const [question, setQuestion] = useState<Question>();
+
+  useEffect(() => {
+    fetch(URL_PATCH + `/${id}`, {
+      method: 'GET',
+      headers: {'content-type':'application/json'},
+    }).then((res) => {
+      if (res.ok) {
+        return (
+          res.json()
+        );
+      }
+    }).then((data) => {
+      setQuestion(data);
+    });
+  }, [id]);
+
+  return question;
 };

@@ -6,7 +6,7 @@ import {useParamsId} from 'hooks/useParamsId';
 
 export const AnswerPage = () => {
   const id = useParamsId();
-  const item = useItemData(id);
+  const item = useItemData(String(id));
 
   return (
     <PageLoader isLoading={isEmptyObject(item)}>

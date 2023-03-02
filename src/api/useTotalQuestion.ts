@@ -1,14 +1,6 @@
-import {useEffect, useState} from 'react';
-import {getCountQuestions} from './index';
+import {useAllData} from './useAllData';
 
 export const useTotalQuestion = () => {
-  const [totalQuestion, setTotalQuestion] = useState(0);
-
-  useEffect(() => {
-    getCountQuestions().then((response) => {
-      return setTotalQuestion(response);
-    });
-  }, []);
-
-  return totalQuestion;
+  const questions = useAllData();
+  return questions.length;
 };
