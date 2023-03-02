@@ -3,7 +3,7 @@ import {MyAvatar} from 'components/MyAvatar';
 import {MyLink} from 'components/MyLink';
 import {MyLogo} from 'components/MyLogo';
 
-import {RoutePath} from 'types';
+import {RoutePath} from '../../components/Router/RouterApp';
 import css from './MainMenuPage.module.scss';
 
 export const MainMenuPage = () => {

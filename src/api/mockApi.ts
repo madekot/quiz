@@ -1,8 +1,13 @@
-import {Question} from 'types';
 import {loggerMessage, LoggerMessageType} from '../helpers/loggerMessage';
 import dataMock from '../mock/data.json';
 
 const DELAY_TIME = 300;
+
+export interface Question {
+  id: string
+  question: string
+  answer: string
+}
 
 export const getAll = (): Promise<Question[]> => {
   loggerMessage(LoggerMessageType.ALL_CARDS);

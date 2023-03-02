@@ -5,7 +5,19 @@ import {NotFondPage} from 'pages/NotFondPage';
 import {QuestionPage} from 'pages/QuestionPage';
 import {QuestionsPage} from 'pages/QuestionsPage';
 import {Route, Routes} from 'react-router-dom';
-import {RouteParams, RoutePath} from 'types';
+
+export const enum RoutePath {
+  MAIN = '/',
+  QUIZ = '/quiz',
+  QUESTION = '/question',
+  QUESTION_LIST = '/question-list',
+  ANSWER = '/answer',
+  NOT_FOND = '*',
+}
+
+export const enum RouteParams {
+  ID = '/:id',
+}
 
 export const RouterApp = () => {
   return (

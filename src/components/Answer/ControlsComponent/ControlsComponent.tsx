@@ -2,14 +2,13 @@ import {useTotalQuestion} from 'api/useTotalQuestion';
 import {MyLink} from 'components/MyLink';
 import {useParamsId} from 'hooks/useParamsId';
 
-import {RoutePath} from 'types';
+import {RoutePath} from '../../Router/RouterApp';
 import css from './ControlsComponent.module.scss';
 
 export const ControlsComponent = () => {
   const id = useParamsId();
   const currentQuestion = id;
   const totalQuestions = useTotalQuestion();
-  const isLoading = Boolean(totalQuestions);
 
   const text = totalQuestions === currentQuestion
     ? 'Вернуться к списку вопросов'
@@ -24,7 +23,6 @@ export const ControlsComponent = () => {
       classNames={css.myLink}
       to={to}
       text={text}
-      isLoading={!isLoading}
     />
   );
 };

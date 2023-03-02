@@ -1,8 +1,9 @@
 import {Center} from '@chakra-ui/react';
 import { Text } from '@chakra-ui/react';
-import {Loader} from 'components/Loader';
 import {Link} from 'react-router-dom';
-import {RoutePath, Question} from 'types';
+import {Question} from '../../api/mockApi';
+import {Loader} from '../Loader';
+import {RoutePath} from '../Router/RouterApp';
 
 interface QuestionsListProps {
   data: Question[]

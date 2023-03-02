@@ -1,5 +1,5 @@
 import {NavLink} from 'react-router-dom';
-import {RoutePath} from 'types';
+import {RoutePath} from '../Router/RouterApp';
 import css from './Header.module.scss';
 
 const setActive = ({isActive}: {isActive: boolean}): string => {
