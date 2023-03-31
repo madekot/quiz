@@ -69,6 +69,7 @@ export const api = {
       type: Type.GET,
     });
   },
+
   post(url: string, data: any) {
     return load({
       url,
