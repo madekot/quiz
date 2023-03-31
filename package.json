@@ -11,10 +11,10 @@
     "@testing-library/react": "13.4.0",
     "@testing-library/user-event": "13.5.0",
     "@types/jest": "27.5.2",
-    "@types/node": "16.18.11",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "framer-motion": "8.5.2",
+    "node-polyfill-webpack-plugin": "^2.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-redux": "8.0.2",
@@ -47,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@types/node": "^18.15.11",
     "@types/react-router-dom": "5.3.3",
     "@typescript-eslint/eslint-plugin": "5.49.0",
     "@typescript-eslint/parser": "5.49.0",

@@ -1,13 +1,14 @@
 import {EntryForm} from 'components/Form/EntryForm';
-import {FormEvent, useEffect, useState} from 'react';
+import {Dispatch, FormEvent, SetStateAction, useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-import {KEY_URL} from '../../api/consts';
-import {FormFields, Users} from '../Authorization/Authorization';
+import {api} from '../../api/cards';
+import {KEY, POINT_USERS} from '../../api/consts';
+import {FormFields, User} from '../Authorization/Authorization';
 import {RoutePath} from '../Router/RouterApp';
 
 export const Registration = () => {
   const navigate = useNavigate();
-  const [isUserCreated, setIsUserCreated] = useState<boolean>();
+  const [isUserCreated, setIsUserCreated] = useState<boolean | undefined>();
 
   useEffect(() => {
     if (!isUserCreated) {
@@ -16,14 +17,16 @@ export const Registration = () => {
     navigate(RoutePath.QUESTION_LIST);
   }, [isUserCreated, navigate]);
 
-  const onSubmit = async (e: FormEvent<HTMLFormElement & FormFields>) => {
+  const onSubmit = async (
+    e: FormEvent<HTMLFormElement & FormFields>,
+    setIsUserCreated: Dispatch<SetStateAction<boolean | undefined>>,
+  ) => {
     e.preventDefault();
 
     const login = e.currentTarget.login.value;
     const password = e.currentTarget.password.value;
 
-    const res = await fetch(`${KEY_URL}/users?login=${login}`);
-    const data: Users[] = await res.json();
+    const data: User[] = await api.get(`${KEY}${POINT_USERS}?login=${login}`);
     if (data.length !== 0) {
       setIsUserCreated(false);
       return;
@@ -34,11 +37,7 @@ export const Registration = () => {
       password,
     };
 
-    await fetch(KEY_URL + '/users', {
-      method: 'POST',
-      headers: {'content-type':'application/json'},
-      body: JSON.stringify(newUser),
-    });
+    await api.post(`${KEY}${POINT_USERS}`, newUser);
 
     setIsUserCreated(true);
   };
@@ -51,6 +50,10 @@ export const Registration = () => {
       title='Регистрация'
       ErrorMessage='Пользователь с таким именем уже существует'
       isError={isUserCreated === false}
-      onSubmit={onSubmit}/>
+      onSubmit={
+        (evt) => {
+          onSubmit(evt, setIsUserCreated);
+        }}
+    />
   );
 };
